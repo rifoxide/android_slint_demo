@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/sh
 set -eu
-ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+ROOT="$(cd "$(dirname "$0")" && pwd)"
 PREFIX="${PREFIX:-/data/data/com.termux/files/usr}"
 export JAVA_HOME="$PREFIX/lib/jvm/java-17-openjdk"
 export ANDROID_JAR="$ROOT/tools/android.jar"
