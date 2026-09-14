@@ -1,0 +1,41 @@
+import { Button } from "std-widgets.slint";
+
+export component App inherits Window {
+    preferred-width: 360px;
+    preferred-height: 640px;
+    background: #0f172a;
+    property <int> counter: 0;
+
+    VerticalLayout {
+        alignment: center;
+        padding: 32px;
+
+        Text {
+            text: "Slint on Android";
+            color: #94a3b8;
+            font-size: 18px;
+            horizontal-alignment: center;
+        }
+
+        Text {
+            text: root.counter;
+            color: #f8fafc;
+            font-size: 110px;
+            font-weight: 700;
+            horizontal-alignment: center;
+        }
+
+        HorizontalLayout {
+            alignment: center;
+            spacing: 16px;
+            Button {
+                text: "Tap";
+                clicked => { root.counter += 1; }
+            }
+            Button {
+                text: "Reset";
+                clicked => { root.counter = 0; }
+            }
+        }
+    }
+}

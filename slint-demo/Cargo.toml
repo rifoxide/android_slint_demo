@@ -1,0 +1,24 @@
+[package]
+name = "slintdemo"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+[lib]
+name = "slintdemo"
+crate-type = ["cdylib"]
+
+[dependencies]
+slint = { version = "1", default-features = false, features = [
+    "std",
+    "compat-1-2",
+    "backend-android-activity-06",
+    "renderer-femtovg",
+] }
+
+[build-dependencies]
+slint-build = "1"
+
+[profile.dev]
+opt-level = 1
+strip = "debuginfo"

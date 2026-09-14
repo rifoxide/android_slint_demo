@@ -1,0 +1,8 @@
+target/
+/keystore
+/tools
+*.apk
+apk-stage/
+slint-demo-unsigned.apk
+check.apk
+logcat.txt
