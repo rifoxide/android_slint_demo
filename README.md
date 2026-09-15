@@ -4,6 +4,10 @@ A minimal [Slint](https://slint.dev) demo app for Android — compiled, packaged
 and signed **entirely on-device** from [Termux](https://termux.dev). No Android
 SDK, no NDK, no Android Studio, no host machine.
 
+Tested on the [Termux app from F-Droid](https://f-droid.org/packages/com.termux/)
+on an arm64 device running Android; other Termux distribution channels
+(e.g. GitHub builds) should work the same.
+
 The demo is a simple counter (label, big number, Tap / Reset buttons) defined in
 `ui/app.slint`, running as a native shared library launched through
 `android.app.NativeActivity`.
